@@ -6,7 +6,7 @@ import ProHead from "./prohead";
 export default function Profile() {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:3001/")
+        axios.get("https://tstcserver.onrender.com/")
             .then(res => setData(res.data))
             .catch(err => console.log(err))
     }, [])
