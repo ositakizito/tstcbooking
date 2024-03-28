@@ -10,7 +10,7 @@ export default function Ticket() {
 
     const [tick, setTick] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3001/booking/' + id).then(res => {
+        axios.get('https://tstcserver.onrender.com/booking/' + id).then(res => {
             setTick(res.data[0]);
         }).catch(err => console.log(err))
     })
