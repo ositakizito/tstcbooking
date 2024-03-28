@@ -13,7 +13,7 @@ export default function Login() {
     const handlesubmit = (e)=> {
       e.preventDefault();
       
-      axios.post('http://localhost:3001/users', value)
+      axios.post('https://tstcserver.onrender.com/users', value)
       .then(res => {
         navigate("/profile");
       })
