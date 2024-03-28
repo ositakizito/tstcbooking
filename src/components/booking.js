@@ -20,7 +20,7 @@ export default function Booking() {
     const handlesubmit = (e) => {
         e.preventDefault();
 
-        axios.post('https://tstcserver.onrender.com/booking', value)
+        axios.post('https://tstcserver.onrender.com/booking/', value)
             .then(res => {
                 navigate("/pay");
             })
