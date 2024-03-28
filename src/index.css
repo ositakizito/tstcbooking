@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Tangerine:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins' sans-serif;
+}
+
+body {
+  font-family: 'Poppins' sans-serif;
+  background-color: var(--bg);
+
+}
+
+:root {
+  --bghead: #EB1F27;
+  --white: #fff;
+  --gren: #0D9737;
+  --greenText: #32CE62;
+  --gray: #9CA0AB;
+  --bg: #f0f0f0;
+  --bg2: #181820;
+  --line: rgb(80, 79, 79);
+  --black: #000;
+}
+
+/* header */
+.bck {
+  width: 100%;
+  background-color: var(--bghead);
+  padding: 10px 5px;
+  color: var(--white);
+}
+
+/* header */
+/* Booking page */
+.booking {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+}
+
+.booking button {
+  border: none;
+  outline: none;
+  background-color: unset;
+
+}
+
+.booking button img {
+  width: 100%;
+  padding: 10px;
+}
+
+/* profile */
+.booking .list {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+}
+
+.booking .bookk {
+  background-color: var(--bghead);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  padding: 10px;
+  color: var(--white);
+
+}
+
+.booking .bookk .bok {
+  display: flex;
+}
+
+tbody {
+  padding: 10px 8px;
+  line-height: 30px;
+  color: var(--black);
+
+}
+
+tbody td {
+  padding: 10px;
+  background-color: var(--white);
+  width: 200px;
+  text-align: center;
+}
+
+.booking .books {
+  display: flex;
+  margin: -5px 10px;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.booking .butn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.booking .butn button {
+  padding: 12px 10px;
+  width: 100%;
+  background-color: var(--bghead);
+  color: var(--white);
+  margin: 10px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* profile */
+
+.booking1 {
+  background-color: var(--white);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.booking1 .booking2 {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.booking1 .booking2 .booking3 {
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+  padding: 10px;
+  margin-top: 20px;
+  font-weight: 700;
+
+}
+
+.booking1 .booking2 .booking4 {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg);
+  line-height: 25px;
+  padding: 10px;
+  width: 90%;
+  border-radius: 8px;
+  color: var(--gray);
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+}
+
+.booking1 .booking2 .booking5 .booking6 i {
+  font-size: 20px;
+}
+
+/* .booking1 .booking2 .booking7 {
+  margin-top: 10px;
+  margin-right: 40px;
+  font-size: 16px;
+  color: var(--black);
+} */
+/* .booking1 .booking2 .booking7 input {
+  border: none;
+  outline: none;
+  background-color: unset;
+  padding: 10px 8px;
+  display: flex;
+  margin-top: 5px;
+} */
+/* 
+.booking1 .booking2 .booking7 input::placeholder {
+  text-align: right;
+  margin-right: 40px;
+  font-size: 16px;
+
+} */
+
+/* .booking1 .booking2 .booking7 p {
+  margin-right: 45px;
+} */
+
+.booking1 .booking2 .booking7 select {
+  border: none;
+  outline: none;
+  background-color: unset;
+  font-size: 16px;
+  width: 100px;
+  color: var(--black);
+  font-weight: 600;
+  padding: 10px;
+}
+
+.booking1 .booking2 .bookingArr {
+  background-color: var(--bghead);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  right: 25px;
+  margin-top: -40px;
+  border-radius: 50px;
+  color: var(--white);
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookHome {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  padding: 10px;
+  /* rgba color remember */
+  background-color: var(--white);
+}
+
+.bookHome button {
+  background-color: unset;
+  outline: none;
+  border: none;
+  line-height: 80px;
+  font-family: "Poppins";
+  width: 100%;
+
+}
+
+.bookHome button img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bookHome p.bookr {
+  font-size: 250%;
+  font-weight: 600;
+}
+
+.bookHome button.getstart {
+  background-color: var(--bghead);
+  padding: 14px;
+  margin: 12px 0;
+  color: var(--white);
+  line-height: 30px;
+  border-radius: 10px;
+
+}
+
+.bookHome p.bookrr {
+  font-size: 20px;
+  color: var(--gray);
+
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.book1 {
+  border: 2px solid var(--bg);
+  border-radius: 6px;
+  line-height: 40px;
+  justify-content: center;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.book1 input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.book1.opt1 {
+  padding: 7px 8px;
+  outline: none;
+}
+
+.book1.opt {
+  padding: 20px 8px;
+  outline: none;
+}
+
+.book2 {
+  margin: 20px;
+}
+
+.book2 button {
+  border: none;
+  width: 100%;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 15px 8px;
+  color: var(--white);
+  background-color: var(--bghead);
+  outline: none;
+  border-radius: 6px;
+}
+
+.booking1 .booking2 .bookrecent {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 17px;
+  font-size: 16px;
+}
+
+.booking1 .booking2 .bookrecent .books {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.booking1 .booking2 .bookrecent .bookss {
+  color: var(--bghead);
+}
+
+.booking1 .booking2 .bookk {
+  display: flex;
+  background-color: var(--bghead);
+  margin: 17px;
+  padding: 10px;
+  border-radius: 6px;
+  line-height: 25px;
+  color: var(--white);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking1 .booking2 .bookk .bookk1 {
+  background-color: var(--white);
+  width: 60px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+}
+
+.booking1 .booking2 .bookk .bookk1 i {
+  font-size: 25px;
+  color: var(--bghead);
+
+}
+
+.booking1 .booking2 .bookk .bookk2 {
+
+  font-size: 16px;
+  width: 100%;
+
+}
+
+.booking1 .booking2 .bookk .bookk2 .bokja {
+  margin-left: 20px;
+
+}
+
+
+
+.booking1 .booking2 .bookk .bookchev {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Ticket css */
+.tk{
+  font-family: "Poppins";
+}
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+  background-color: var();
+  padding: 10px;
+  color: var(--bghead);
+
+}
+
+.ticket .tick {
+  font-size: 120%;
+  font-weight: 700;
+}
+.ticketop{
+ 
+  padding: 8px 8px;
+}
+.ticketop .tickimg i{
+  margin-top: 15px;
+  font-size: 20px;
+
+  
+}
+/* 
+for booking page
+
+*/
+.ticketop.top {
+  margin-bottom: 8px;
+}
+
+/* 
+for booking page
+ ends
+*/
+.ticketop {
+  display: flex;
+  background-color: var(--white);
+  width: 90%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.ticketop .ticketname {
+  margin-top: 9px;
+  margin-left: 15px;
+}
+
+.ticketop .ticketname .name {
+  font-weight: 700;
+
+}
+
+.ticketop .ticketname .pass {
+  font-size: 15px;
+
+}
+
+.ticket2 {
+  background-color: var(--white);
+  padding: 10px;
+  width: 90%;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+
+.ticket2 .tck {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ticket2 .tickjal {
+  font-weight: 700;
+  font-size: 100%;
+}
+
+.ticket2 .tickcirle {
+  background-color: var(--bghead);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: var(--white);
+}
+
+.ticket2 .tickfrm {
+  font-size: 12px;
+  color: var(--gray);
+  display: flex;
+  justify-content: center;
+}
+
+.ticket2 .tickline {
+  height: 2px;
+  width: 50px;
+  position: static;
+  margin-top: 20px;
+  left: 100px;
+  background-color: var(--bghead);
+}
+
+.ticket2 .tickline2 {
+  height: 2px;
+  width: 50px;
+  position: static;
+  margin-top: 20px;
+  right: 100px;
+  background-color: var(--bghead);
+}
+
+.ticketID {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.ticketID .ticketdate {
+  background-color: var(--bghead);
+  flex: 1;
+  margin: 5px;
+  color: var(--white);
+  line-height: 45px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticketID .ticketdate p {
+  margin-left: 3px;
+  font-size: 15px;
+}
+
+.ticketID .ticketdate i {
+  color: var(--white);
+}
+
+.ticketlist {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.ticketlist .tickseat {
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  padding: 5px;
+  flex: 1;
+
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticketlist .tickseat.each .tick2 {
+  padding: 5px;
+}
+
+.ticketlist .tickseat.tck {
+  background-color: var(--bghead);
+  line-height: 35px;
+  width: 100px;
+}
+
+.ticketlist .tickseat.tck .tick1 {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.ticketlist .tickseat .tick1 {
+  color: var(--black);
+  font-size: 15px;
+
+}
+.ticketlist .tickseat .tick1btn {
+  width: 100%;
+  background-color: unset;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-family: "Poppins";
+  color: var(--white);
+
+}
+
+.ticketlist .tickseat .tick2 {
+  font-weight: 700;
+  color: var(--bghead);
+
+}
+
+.ticketlist img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.ticketlist1 {
+  margin: 5px;
+}
+
+.ticketlist1 form .ticketprice {
+  width: 100%;
+  margin: 10px 0;
+  outline: none;
+  border: 1px solid gray;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* SignUp page */
+
+.SignUp {
+  display: flex;
+  flex-direction: column;
+}
+
+.SignUp button img {
+  width: 100%;
+}
+
+/* .SignUp img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+} */
+
+.SignUp form {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.SignUp .signInput {
+  line-height: 40px;
+  padding: 14px 10px;
+  margin: 8px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+
+.SignUp .signInput.btn {
+  background-color: var(--bghead);
+  color: var(--white);
+
+}
+
+.SignUp .signInput.btn2 {
+  background-color: var(--gray);
+  color: var(--white);
+
+}
+
+.SignUp button.btnS {
+  background-color: var(--gray);
+  width: 93%;
+  margin: 0 auto;
+  padding: 14px 10px;
+  color: var(--white);
+  border: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+}
+
+/* SignUp End page */
+
+@media only screen and (min-width: 1200px) {
+
+  .bookHome {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .bookHome button img {
+    width: 40%;
+  }
+
+  .bookHome .bookr img {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+
+  }
+
+  .bookHome .bookr {
+    text-align: center;
+  }
+
+  .bookHome .bookrr {
+    text-align: center;
+  }
+
+  .SignUp {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .SignUp .mg {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .btnS {
+    width: 100%;
+  }
+
+  .booking {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .booking .mg {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .books {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  tbody td {
+    width: 400px;
+
+  }
+
+  .tk {
+    width: 60%;
+    margin: auto;
+  }
+
+  .tk .ticketlist img {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .bck {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .bck .bk i {
+    position: relative;
+    left: -100px;
+  }
+}
