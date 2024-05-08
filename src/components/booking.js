@@ -9,7 +9,7 @@ import Header from "./header";
 export default function Booking() {
 
     const destinations = {
-
+        select: "",
         Abuja: "10,000",
         Bauchi: "7,500",
         Bayelsa: "6,000",
