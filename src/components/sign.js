@@ -29,7 +29,7 @@ export default function SignUp() {
       setLoading(true);
 
       axios
-      .post("https://tstcserver.onrender.com, value)
+      .post("https://tstcserver.onrender.com", value)
       .then((res) => {
         setSuccessMessage("Sign up successful. Redirecting to login...");
         setTimeout(() => {
