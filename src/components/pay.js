@@ -1,34 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
-
 export default function Pay() {
-    const [proofImage, setProofImage] = useState(null);
+    
+    const navigate = useNavigate();
+    const [isImageUploaded, setIsImageUploaded] = useState(false);
 
     const handleImageChange = (e) => {
-        const file = e.target.files[0];
-        setProofImage(file);
+        // Check if a file is selected
+        if (e.target.files.length > 0) {
+            setIsImageUploaded(false); // Reset to false when a new image is selected
+        }
     };
-
+    
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        
-        // Create form data object
-        const formData = new FormData();
-        formData.append('proofImage', proofImage);
-
-        // You can append other form data fields here if needed
-
-        // Send form data to server
-        axios.post('http://localhost:3001/upload', formData)
-            .then(res => {
-                console.log("Image uploaded successfully!");
-                // Add any additional handling after successful image upload
-            })
-            .catch(err => {
-                console.error("Error uploading image:", err);
-                // Add error handling here
-            });
+        // Here you can add code to handle form submission
+        // For now, let's just set isImageUploaded to true
+        setIsImageUploaded(true);
+        setTimeout(() => {
+            navigate("/profile");
+        }, 2000);
     };
 
     return (
@@ -53,9 +44,11 @@ export default function Pay() {
                     </div>
 
                     <div className="ticketlist1">
+
                         <form onSubmit={handleFormSubmit}>
                             <p>Send proof of Payment</p>
                             <input type="file" className="ticketprice" onChange={handleImageChange} />
+                            {isImageUploaded && <p>Image uploaded successfully!</p>}
                             <div className="ticketlist">
                                 <button type="submit" className="tickseat tck">
                                     <div className="tick1">SEND</div>
@@ -67,6 +60,7 @@ export default function Pay() {
                                 </Link>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
