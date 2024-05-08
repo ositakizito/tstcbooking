@@ -661,7 +661,7 @@ for booking page
 @media only screen and (min-width: 1200px) {
 
   .bookHome {
-    width: 200%;
+    width: 100%;
     margin: 0 auto;
   }
 
