@@ -1,6 +1,7 @@
 import bus from "../components/images/bus.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import ProHead from "./prohead";
 import axios from "axios";
 export default function Login() {
 
@@ -25,6 +26,7 @@ export default function Login() {
   }
   return (
     <>
+       <ProHead/>
       <div className="SignUp">
         <img src={bus} alt="" className="mg" />
         {error && <p style={{ color: 'red' }}>{error}</p>}
