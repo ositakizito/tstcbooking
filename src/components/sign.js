@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import bus from "../components/images/bus.png";
 import { useState } from "react";
+import ProHead from "./prohead";
 import axios from "axios";
 export default function SignUp() {
 
@@ -70,7 +71,7 @@ export default function SignUp() {
 
   return (
     <>
-
+<ProHead/>
       <div className="SignUp">
         <img src={bus} alt="" className="mg" />
         <form onSubmit={handlesubmit}>
