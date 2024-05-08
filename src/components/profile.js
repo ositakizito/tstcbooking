@@ -34,10 +34,7 @@ export default function Profile() {
 
                     <div className="list">
                         <div style={{ textAlign: "center", padding: "10px" }}>DASHBOARD</div>
-                        {/* <div className="">Email: JohnDoe@gmail.com</div>
-                        <div className="">Name:  John Deo</div> */}
-
-                        {/* Display other user data as needed */}
+                      
                         {loggedInUser ? (
                             <div>
                                <p>Welcome..</p>
