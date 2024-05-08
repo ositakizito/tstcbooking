@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import bus from "../components/images/bus.png";
-import { useState } from "react";
 import ProHead from "./prohead";
+import { useState } from "react";
 import axios from "axios";
 export default function SignUp() {
 
@@ -14,8 +14,10 @@ export default function SignUp() {
     password1: ''
 
   })
-  // const [successMessage, setSuccessMessage] = useState('');
-  const [errors, setErrors] = useState({});
+
+  const [errors,setErrors] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -24,12 +26,22 @@ export default function SignUp() {
     const validationErrors = validateFormData(value);
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
+      setLoading(true);
 
-      axios.post('https://tstcserver.onrender.com/users', value)
-        .then(res => {
+      axios
+      .post("http://localhost:3001/users", value)
+      .then((res) => {
+        setSuccessMessage("Sign up successful. Redirecting to login...");
+        setTimeout(() => {
           navigate("/login");
-        })
-        .catch(err => console.log(err))
+        }, 2000);
+      })
+      .catch((err) => {
+        setErrors("An error occurred. Please try again.");
+      })
+      .finally(() => {
+        setLoading(false); // Set loading to false regardless of success or failure
+      });
     }
 
   }
@@ -63,7 +75,7 @@ export default function SignUp() {
     } else if (data.password.length < 6) {
       errors.password = 'Password must be at least 6 characters long';
     }
-    if (data.password !== data.Password1) {
+    if (data.password !== data.password1) {
       errors.password1 = 'Passwords do not match';
     }
     return errors;
@@ -75,7 +87,10 @@ export default function SignUp() {
       <div className="SignUp">
         <img src={bus} alt="" className="mg" />
         <form onSubmit={handlesubmit}>
+           <div style={{textAlign: "center"}}>
+          {successMessage && <span style={{ color: 'green' }}>{successMessage}</span>}
 
+           </div>
           {errors.first && <span>{errors.first}</span>}
           <input type="text" className="signInput" placeholder="FirstName" name="first" onChange={handleChange} value={value.first} />
           {errors.last && <span>{errors.last}</span>}
@@ -87,10 +102,10 @@ export default function SignUp() {
           {errors.password && <span>{errors.password}</span>}
           <input type="password" className="signInput" placeholder="Password" name="password" onChange={handleChange} value={value.password} />
           <input type="password" className="signInput" placeholder="Confirm Password" name="password1" onChange={handleChange} value={value.password1} />
-          <input type="submit" className="signInput btn" value="SignUp" />
+          <input type="submit" className="signInput btn"  value={loading ? "Signing up..." : "Signup"}
+          disabled={loading}/>
 
         </form>
-        <br></br>
         <Link to="/login" style={{ textDecoration: "none" }}> <button className="btnS"  style={{lineHeight: "20px",borderRadius: "30px"}}>Login</button></Link>
 
       </div>
