@@ -9,6 +9,7 @@ export default function ProHead() {
 
                     <div className="bck bk"></div>
                 </Link> */}
+   <p style={{margin: "5px"}}>TSTC jalingo</p>
             </div>
         </>
     )
