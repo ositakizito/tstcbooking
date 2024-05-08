@@ -614,28 +614,29 @@ for booking page
   display: flex;
   flex-direction: column;
   width: 95%;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .SignUp .signInput {
-  line-height: 40px;
-  padding: 14px 10px;
+  line-height: 28px;
+  padding: 14px 20px;
   margin: 8px;
   font-size: 18px;
   outline: none;
+  border-radius: 30px;
   border: none;
 }
 
 .SignUp .signInput.btn {
   background-color: var(--bghead);
   color: var(--white);
-
+ 
 }
 
 .SignUp .signInput.btn2 {
   background-color: var(--gray);
   color: var(--white);
-
+  margin: 0;
 }
 
 .SignUp button.btnS {
@@ -660,7 +661,7 @@ for booking page
 @media only screen and (min-width: 1200px) {
 
   .bookHome {
-    width: 60%;
+    width: 200%;
     margin: 0 auto;
   }
 

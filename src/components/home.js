@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bus from "../components/images/bus.jpg";
+import bus from "../components/images/bus.png";
 import tstc from "../components/images/tstc.png";
 export default function Home() {
 

@@ -1,8 +1,8 @@
-import scan from "../components/images/scan.png";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from 'react-to-print';
 import axios from "axios";
+
 export default function Ticket() {
     const { id } = useParams();
 
@@ -17,21 +17,20 @@ export default function Ticket() {
 
     const handlePrint = useReactToPrint({
         content: () => pdfRef.current,
-      });
-  
+    });
 
     return (
         <>
-            <div className="tk" ref={pdfRef} style={{backgroundColor: "#f0f0f0"}}>
+            <div className="tk" ref={pdfRef} style={{ backgroundColor: "#f0f0f0" }}>
                 <div className="ticket">
                     <Link to="/profile" style={{ color: "#EB1F27" }}> <div className=""><i className="fa fa-chevron-left"></i></div> </Link>
                     <div className="tick">Your Ticket</div>
                     <div className=""><i className="fa fa-share"></i></div>
                 </div>
                 <div className="ticketop">
-                    <div className="tickimg"><i className="fa fa-user" style={{ color: "#EB1F27" }}/></div>
+                    <div className="tickimg"><i className="fa fa-user" style={{ color: "#EB1F27" }} /></div>
                     <div className="ticketname">
-                        <p className="name">Jason Davis</p>
+                        <p className="name">John Deo</p>
                         <p className="pass">Passenger</p>
                     </div>
                 </div>
@@ -52,7 +51,8 @@ export default function Ticket() {
                     <div className="ticketID">
                         <div className="ticketdate">
                             <i className="fa fa-calendar" />
-                            <p>02/04/2024</p>
+
+                            <p id="dat">02/04/2024</p>
                         </div>
                         <div className="ticketdate">
                             <i className="fa fa-clock" />
@@ -62,7 +62,7 @@ export default function Ticket() {
                     <div className="ticketlist">
                         <div className="tickseat">
                             <div className="tick1">Ticket ID</div>
-                            <div className="tick2">388{tick.TicketID}</div>
+                            <div className="tick2">000{tick.TicketID}</div>
                         </div>
 
                         <div className="tickseat">
@@ -78,7 +78,18 @@ export default function Ticket() {
                         </div>
                     </div>
                     <div className="ticketlist">
-                        <img src={scan} alt=""/>
+                        <div className="tickseat">
+                            <div className="tick1">Departure Time</div>
+                            <div className="tick2">7:30 AM</div>
+                        </div>
+                    </div>
+                    <div className="ticketlist">
+
+                        <p style={{ fontWeight: 800, marginTop: '10px' }}>TSTC Address</p>
+                    </div>
+                    <div className="ticketlist">
+
+                        <p>Tstc Office, Airstrip Mayo-Dassa Opposite Baptist Academic, Jalingo Taraba State</p>
                     </div>
                     <div className="ticketlist">
                         <div className="tickseat tck">

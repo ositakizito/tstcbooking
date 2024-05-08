@@ -4,26 +4,39 @@ import tstc from "../components/images/tstc.png"
 import { useEffect, useState } from "react";
 import ProHead from "./prohead";
 export default function Profile() {
+
     const [data, setData] = useState([]);
     useEffect(() => {
         axios.get("https://tstcserver.onrender.com/")
             .then(res => setData(res.data))
             .catch(err => console.log(err))
     }, [])
-
+    const [userData, setUserData] = useState({
+        firstname: "John Doe", email: "Johndeo@gmail.com"
+    });
+    useEffect(() => {
+        axios.get("https://tstcserver.onrender.com/profile")
+            .then(res => setUserData(res.data))
+            .catch(err => console.log(err))
+    }, []);
     return (
         <>
-           
-               <ProHead/>
+
+            <ProHead />
             <div className="booking">
                 <button>
-                    <img src={tstc} className="mg" alt=""/>
+                    <img src={tstc} className="mg" alt="" />
                 </button>
                 <div className="list">
-                    <div style={{ textAlign: "center", padding: "10px", }}>DASHBOARD </div>
-                    <div className="">Name: John Doe</div>
-                    <div className="">Email: Doe@gmail.com</div>
-                    <div className="">Phone Number: +2347014673892</div>
+
+                    <div className="list">
+                        <div style={{ textAlign: "center", padding: "10px" }}>DASHBOARD</div>
+                        <div className="">Email: JohnDoe@gmail.com</div>
+                        <div className="">Name:  John Deo</div>
+
+                        {/* Display other user data as needed */}
+                    </div>
+
                 </div>
                 <div className="butn">
                     <Link to="/booking" style={{ textDecoration: "none", width: "100%", display: "flex" }}>
@@ -40,7 +53,7 @@ export default function Profile() {
                 </div>
 
                 <div className="books">
-                  
+
 
                     <table>
                         <thead>
@@ -51,7 +64,7 @@ export default function Profile() {
                             {data.map((ticket, index) => {
                                 return <tr key={index}>
                                     <td>{ticket.TicketID}</td>
-                                    <td><Link style={{textDecoration: "none"}} to={`/ticket/${ticket.TicketID}`}>Ticket</Link></td>
+                                    <td><Link style={{ textDecoration: "none" }} to={`/ticket/${ticket.TicketID}`}>Ticket</Link></td>
                                 </tr>
                             })}
 
