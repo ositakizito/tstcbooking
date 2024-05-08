@@ -18,7 +18,8 @@ export default function Ticket() {
     const handlePrint = useReactToPrint({
         content: () => pdfRef.current,
     });
-
+  // Retrieve login details from session storage
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     return (
         <>
             <div className="tk" ref={pdfRef} style={{ backgroundColor: "#f0f0f0" }}>
@@ -30,7 +31,15 @@ export default function Ticket() {
                 <div className="ticketop">
                     <div className="tickimg"><i className="fa fa-user" style={{ color: "#EB1F27" }} /></div>
                     <div className="ticketname">
-                        <p className="name">John Deo</p>
+                        <p className="name">{loggedInUser ? (
+                            <div>
+                               
+                                <p>{loggedInUser.email}</p>
+                                {/* Display other user details */}
+                            </div>
+                        ) : (
+                            <p>User is not logged in.</p>
+                        )}</p>
                         <p className="pass">Passenger</p>
                     </div>
                 </div>
