@@ -11,14 +11,17 @@ export default function Profile() {
             .then(res => setData(res.data))
             .catch(err => console.log(err))
     }, [])
-    const [userData, setUserData] = useState({
-        firstname: "John Doe", email: "Johndeo@gmail.com"
-    });
-    useEffect(() => {
-        axios.get("https://tstcserver.onrender.com/profile")
-            .then(res => setUserData(res.data))
-            .catch(err => console.log(err))
-    }, []);
+   
+    // Retrieve login details from session storage
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+    // Check if user is logged in and display their details
+
+    const handleLogout = () => {
+        // Clearing login details from session storage
+        localStorage.removeItem("loggedInUser");
+        // Other logout logic (e.g., redirect to login page)
+      };
     return (
         <>
 
@@ -31,10 +34,19 @@ export default function Profile() {
 
                     <div className="list">
                         <div style={{ textAlign: "center", padding: "10px" }}>DASHBOARD</div>
-                        <div className="">Email: JohnDoe@gmail.com</div>
-                        <div className="">Name:  John Deo</div>
+                        {/* <div className="">Email: JohnDoe@gmail.com</div>
+                        <div className="">Name:  John Deo</div> */}
 
                         {/* Display other user data as needed */}
+                        {loggedInUser ? (
+                            <div>
+                               <p>Welcome..</p>
+                                <p>Email: {loggedInUser.email}</p>
+                                {/* Display other user details */}
+                            </div>
+                        ) : (
+                            <p>User is not logged in.</p>
+                        )}
                     </div>
 
                 </div>
@@ -43,7 +55,7 @@ export default function Profile() {
                         <button>Book</button>
                     </Link>
                     <Link to="/" style={{ textDecoration: "none", width: "100%", display: "flex" }}>
-                        <button>Logout</button>
+                        <button onClick={handleLogout}>Logout</button>
                     </Link>
 
                 </div>
